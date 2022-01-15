@@ -10,10 +10,6 @@ const  levels = {
     silly: 6
   };
 
-
-
-
-
   const logger = winston.createLogger({
       levels: levels,
     exitOnError: false,

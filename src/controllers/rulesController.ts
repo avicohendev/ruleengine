@@ -20,6 +20,7 @@ const getRules = async (req: Request, res: Response, next: NextFunction) =>{
         const rulesResult =rulesCheck(rulesArray, factsResponse);
 
         logger.info(`rules for table ${tableName} were calculated`);
+        //the result is in a format of thable name and rules array
         res.status(200).json({
             tableName: tableName,
             rules: rulesResult

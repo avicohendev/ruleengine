@@ -12,7 +12,7 @@ const getFactsForTable = async (tableName: string)=>{
     const queriesResult : {[key : string]: any} = {}
     queriesResult['table-name'] = tableName;
     for (const query in queries){
-       
+       //connect to the database and perform sql query
         const queryResult = await  connection.query(queries[query] ,{
             type: QueryTypes.SELECT,
             logging: (mesage: string) => {

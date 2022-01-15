@@ -1,10 +1,7 @@
 import { facts } from "../enums/facts"
 import { rules } from "../enums/rules";
 import { ruleStatus } from "../enums/ruleStatus";
-export type ruleAndFacts = {
-    rule : string
-    conditions : Array<{fact: facts, condition: string, compareValue: any}>
-}
+
 type factsResultsType ={
     [fact : string] : any
 }
@@ -47,8 +44,7 @@ const checkSingleRule =(rule: rules,  factsAndReuslts: factsResultsType) =>{
             }
             else{
                 ruleResult.status = ruleStatus.pass;
-                ruleResult.message = `The table has a small number of rows ${factsAndReuslts[facts.numberOfRows]}`
-
+                ruleResult.message = `The table has a small number of rows ${factsAndReuslts[facts.numberOfRows]}`;
             }
             break;
         case rules.primaryKey:
