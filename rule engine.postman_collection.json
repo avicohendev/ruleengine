@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "2390d821-fca3-4fd2-b5a9-af065a531fd0",
+		"name": "rule engine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "facts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/facts?tableName=Students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"facts"
+					],
+					"query": [
+						{
+							"key": "tableName",
+							"value": "Students"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rules",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rules?tableName=Courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rules"
+					],
+					"query": [
+						{
+							"key": "tableName",
+							"value": "Courses"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
