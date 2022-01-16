@@ -50,6 +50,7 @@ const checkSingleRule =(rule: rules,  factsAndReuslts: factsResultsType) =>{
         case rules.primaryKey:
             if (factsAndReuslts[facts.hasPrimaryKey] === "true"){
                 ruleResult.status = ruleStatus.pass;
+                break;
             }else{
                 ruleResult.status = ruleStatus.failed;
                 if(factsAndReuslts[facts.numberOfRows] as number > 10000000){
@@ -75,4 +76,4 @@ const checkSingleRule =(rule: rules,  factsAndReuslts: factsResultsType) =>{
     return ruleResult;
 
 }
-export{rulesCheck, ruleResultType}
+export{rulesCheck, ruleResultType, checkSingleRule, factsResultsType}

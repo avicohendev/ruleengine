@@ -2,15 +2,15 @@
   "compilerOptions": {
     "target": "es6",                                  
     "module": "commonjs",                                
-    "rootDir": "src",                                    
+    // "rootDir": "src",                                    
     "moduleResolution": "node",                       
-    "rootDirs": ["src"],                                
+    "rootDirs": ["src", "test"],                                
      "sourceMap": true,                               
     "outDir": "build",                                   
     "esModuleInterop": true,                             
     "forceConsistentCasingInFileNames": true,           
     "strict": true,                                     
     "noImplicitAny": true,                             
-    "skipLibCheck": true                                
+    "skipLibCheck": true,                         
   }
 }
