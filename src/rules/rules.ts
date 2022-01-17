@@ -63,7 +63,7 @@ const checkSingleRule =(rule: rules,  factsAndReuslts: factsResultsType) =>{
         case rules.pkWithLargeAmountOfColumns:
             if(factsAndReuslts[facts.primaryKeyCountColumns] as number >= 4){
                 ruleResult.status = ruleStatus.failed;
-                ruleResult.message = `High number of columns in the PK. and the value of the fact  ${factsAndReuslts[facts.primaryKeyCountColumns]}`
+                ruleResult.message = `High number of columns in the PK. and the value of the fact ${factsAndReuslts[facts.primaryKeyCountColumns]}`
 
             }else{
                 ruleResult.status = ruleStatus.pass;

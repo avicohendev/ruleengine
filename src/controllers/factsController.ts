@@ -19,10 +19,12 @@ const getFacts = async (req: Request, res: Response, next: NextFunction) =>{
        
         logger.info(`facts for table ${tableName} were calculated`);
         res.status(200).json(factsResponse);
+        return;
 
     }
     catch (error : any){
         next(new  HttpError(400, error.message))
+       
     }
 
 }

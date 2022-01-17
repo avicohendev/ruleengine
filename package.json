@@ -14,10 +14,9 @@
   "start": "tsc && node ./build/src/index.js",
   
     
-  "test": "mocha --require ts-node/register --watch-extensions ts 'test/**/*.spec.ts'"
+  "test": "mocha --timeout 5000 --require ts-node/register --watch-extensions ts 'test/**/*.spec.ts'"
   
   },
-  
   
   "repository": {
   
@@ -56,7 +55,6 @@
     
   "@types/chai": "^4.3.0",
   
-    
   "@types/cors": "^2.8.12",
   
     
@@ -76,6 +74,9 @@
   
     
   "chai": "^4.3.4",
+  
+    
+  "chai-http": "^4.3.0",
   
     
   "mocha": "^9.1.4",
